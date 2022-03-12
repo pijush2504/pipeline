@@ -18,4 +18,12 @@ pipeline {
             }
         }
     }
+    post
+    {
+        always
+        {
+            emailext body: 'it failed', subject: 'Status of Pipeline', to: 'roy.pijush2504@gmail.com'
+        }
+    }
+        
 }
